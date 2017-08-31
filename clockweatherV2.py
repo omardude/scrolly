@@ -53,8 +53,9 @@ while True:
         else:
             alternate = ":"
         now = datetime.datetime.now()
-
-        clockString = str(now.hour) + alternate + str(now.minute).zfill(2)
+        clockString = now.strftime('%I'+alternate+'%M')
+        #clockString = str(now.hour) + alternate + str(now.minute).zfill(2)
+        #clockString = str(now.hour) + alternate + str(now.minute).zfill(2)
         clear()
         write_string(clockString,0, kerning=False)
 
